@@ -97,7 +97,7 @@ public class BookService {
         List<Book> books = bookRepository.findBooksByNumberOfPages();
 
         if(books.isEmpty()) {
-            throw new ApiException("no books found with that category.");
+            throw new ApiException("no books with more than 300 pages.");
         }
 
         return books;
